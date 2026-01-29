@@ -1,33 +1,75 @@
 import React from 'react'
-import {Bookmark} from 'lucide-react'
+import User from './components/User'
+import Card from './components/card'
 
 const App = () => {
+
+  const jobs = [
+  {
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/d/de/Amazon_icon.png",
+    companyName: "Amazon",
+    datePosted: "5 days ago",
+    post: "Senior UI/UX Designer",
+    tag1: "Full Time",
+    tag2: "Senior Level",
+    pay: "$120/hr",
+    location: "Mumbai, India",
+  },
+  {
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    companyName: "Microsoft",
+    datePosted: "10 days ago",
+    post: "Frontend React Developer",
+    tag1: "Full Time",
+    tag2: "Mid Level",
+    pay: "$110/hr",
+    location: "Bangalore, India",
+  },
+  {
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Google_Logo.svg",
+    companyName: "Google",
+    datePosted: "3 days ago",
+    post: "Product Designer",
+    tag1: "Part Time",
+    tag2: "Senior Level",
+    pay: "$130/hr",
+    location: "Hyderabad, India",
+  },
+  {
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+    companyName: "Meta",
+    datePosted: "7 days ago",
+    post: "UI Engineer",
+    tag1: "Full Time",
+    tag2: "Junior Level",
+    pay: "$95/hr",
+    location: "Gurgaon, India",
+  },
+  {
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png",
+    companyName: "Apple",
+    datePosted: "1 day ago",
+    post: "UX Researcher",
+    tag1: "Part Time",
+    tag2: "Senior Level",
+    pay: "$140/hr",
+    location: "Mumbai, India",
+  },
+];
+
+ 
+
   return (
     <div className='parent'>
-      <div className='card'>
-      <div classaName='top'>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Amazon_icon.png" alt="" />
-        <button>Save <Bookmark /></button>
-      
-      </div>
-      <div className='center'>
-        <h3>Amazon <span>5 days ago</span></h3>
-        <h2>Senior UI/UX Designer</h2>
-        <div>
-          <h4>Part time</h4>
-          <h4>Senior level</h4>
-        </div>
-      </div>
-       
 
-      <div className='bottom'>
-        <div>
-          <h3>$120/hrs</h3>
-          <p>Mumbai India</p>
+      <div className="parent">
+      {jobs.map(function (elem,idx) {
+      return <div Key={idx}> <Card companyName={elem.companyName} post={elem.post} brandLogo={elem.brandLogo} datePosted={elem.datePosted} tag1={elem.tag1} tag2={elem.tag2} pay={elem.pay}/>;
         </div>
-          <button>Apply Now</button>
-      </div>
-    </div>
+      })}
+</div>
+
+      
     </div>
   )
 }

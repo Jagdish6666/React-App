@@ -1,22 +1,29 @@
-import React from 'react'
+// import React from 'react'
 
-const Card = (props) => {
-  
-   console.log(props);
-  
-  return (
+
     
        
   
-      <div className='card'>
-        <img src={props.img} alt=' '/>
-      <h1>{props.user},{props.age}</h1>
-      <p>Hii I am Jagdish Jadhav Hello Guys Love you</p>
-      <button>View Profile</button>
-  
-      </div>
- 
-  )
-}
+     
+// // function Login() {
+// //   const [email, setEmail] = useState("");
 
-export default Card
+// //   return (
+// //     <div>
+// //       <h2>Login</h2>
+
+// //       <input
+// //         type="text"
+// //         placeholder="Enter email"
+// //         onChange={(e) => setEmail(e.target.value)}
+// //       />
+
+// //       <p>You typed: {email}</p>
+// //     </div>
+// //   );
+// }
+
+
+ 
+ 
+// export default Login
